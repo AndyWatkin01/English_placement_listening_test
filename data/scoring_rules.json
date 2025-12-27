@@ -1,0 +1,10 @@
+{
+  "scoring_logic": [
+    { "level": "A1", "min_score": 5 },
+    { "level": "A2", "min_score": 5 },
+    { "level": "B1", "min_score": 5 },
+    { "level": "B2", "min_score": 5 },
+    { "level": "C1", "min_score": 5 },
+    { "level": "C2", "min_score": 5 }
+  ]
+}

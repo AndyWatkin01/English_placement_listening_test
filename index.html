@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Listening Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional inline styles for specific elements */
+        #welcomeScreen h1 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        #welcomeScreen p {
+            font-size: 1.1rem;
+            color: #5a6c7d;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+        
+        .welcome-instructions {
+            text-align: left;
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #f1c40f;
+        }
+        
+        .welcome-instructions h3 {
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .welcome-instructions ul {
+            margin: 8px 0;
+            padding-left: 18px;
+            color: #5a6c7d;
+            font-size: 0.95rem;
+        }
+        
+        .welcome-instructions li {
+            margin-bottom: 6px;
+        }
+        
+        #startBtn {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            width: 100%;
+            padding: 16px;
+            font-size: 17px;
+            margin-top: 15px;
+        }
+        
+        .test-header div {
+            font-weight: bold;
+            font-size: 17px;
+        }
+        
+        #nextBtn {
+            background: linear-gradient(135deg, #34495e, #2c3e50);
+            color: white;
+            width: 100%;
+            padding: 16px;
+            font-size: 16px;
+        }
+        
+        /* Results screen specific styles */
+        #resultsScreen h1 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        #finalPlacement {
+            font-size: 1.8rem;
+            color: #27ae60;
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border: 2px solid #2ecc71;
+        }
+        
+        #resultsScreen h3 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .results-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+        }
+        
+        .stat-box {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        #correctAnswers {
+            color: #2ecc71;
+        }
+        
+        #totalQuestionsDisplay {
+            color: #3498db;
+        }
+        
+        .stat-label {
+            color: #5a6c7d;
+        }
+        
+        #exportJsonBtn {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 14px;
+        }
+        
+        #exportCsvBtn {
+            background: linear-gradient(135deg, #27ae60, #229954);
+            color: white;
+            padding: 14px;
+        }
+        
+        #restartBtn {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            width: 100%;
+            padding: 16px;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+        
+        .export-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 25px;
+        }
+        
+        .results-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Custom Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        
+        .modal-title {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .modal-message {
+            color: #5a6c7d;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+        
+        .modal-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .modal-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            min-width: 120px;
+            transition: all 0.2s;
+        }
+        
+        .modal-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .modal-btn-resume {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+        }
+        
+        .modal-btn-restart {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Custom Resume Modal -->
+    <div id="resumeModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-title">📝 Continue Test?</div>
+            <div class="modal-message">
+                You have an unfinished test. Would you like to resume where you left off?
+            </div>
+            <div class="modal-buttons">
+                <button id="modalResumeBtn" class="modal-btn modal-btn-resume">Resume Test</button>
+                <button id="modalRestartBtn" class="modal-btn modal-btn-restart">Start New Test</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome Screen -->
+    <div id="welcomeScreen" class="screen">
+        <div class="welcome-content">
+            <h1>🎧 ENGLISH LISTENING ASSESSMENT V1.0.0</h1>
+            <p>Estimate your English listening level from A1 to C2</p>
+            <p>This is a trial version and the results are for guidance only.</p>
+            
+            <div class="welcome-instructions">
+                <h3>📋 Test Format</h3>
+                <ul>
+                    <li><strong>For each audio:</strong> Listen once, then answer 4 questions</li>
+                    <li>You can replay the audio at any time if you need to</li>
+                    <li>You can not pause the audio</li>
+                    <li>Use your mouse to navigate and click on the answers and buttons</li>
+                </ul>
+            </div>
+            
+            <button id="startBtn" class="btn">🚀 Start Assessment</button>
+        </div>
+    </div>
+
+    <!-- Test Screen -->
+    <div id="testScreen" class="screen">
+        <div class="test-header">
+            <div><span id="levelDisplay">Level: A1</span></div>
+            <div><span id="testProgressText">Progress: 0%</span></div>
+        </div>
+        
+        <div class="progress-bar">
+            <div id="testProgressFill"></div>
+        </div>
+        
+        <div class="question-counter" id="questionCounter">
+            Question 1 of 4 • Listen to audio first
+        </div>
+        
+        <div class="compact-layout">
+            <!-- Audio Player Section -->
+            <div class="audio-player-container">
+                <div class="audio-controls">
+                    <button id="playBtn" class="btn-small">▶ Play Audio</button>
+                    <span id="listenCountDisplay" style="font-weight: bold; font-size: 15px;">Listens: 0</span>
+                </div>
+                
+                <div class="audio-progress-container">
+                    <div class="audio-progress-bar" id="audioProgressBar">
+                        <div class="audio-progress-fill" id="audioProgressFill"></div>
+                    </div>
+                    <div class="audio-time-display">
+                        <span class="audio-time-current" id="audioCurrentTime">0:00</span>
+                        <span class="audio-time-duration" id="audioDuration">0:00</span>
+                    </div>
+                </div>
+                
+                <div class="audio-info">
+                    <div id="currentAudioDisplay">Track loading...</div>
+                </div>
+            </div>
+
+            <!-- Warning Message -->
+            <div id="listenWarning" class="warning">
+                ⚠️ Listen to audio at least once before answering
+            </div>
+            
+            <!-- Question Section -->
+            <div style="display: flex; flex-direction: column; overflow: hidden;">
+                <h2 id="questionText">Question loading...</h2>
+                
+                <div class="options" id="optionsContainer">
+                    <label><input type="radio" name="answer" value="0"> <span id="option1">Option 1</span></label>
+                    <label><input type="radio" name="answer" value="1"> <span id="option2">Option 2</span></label>
+                    <label><input type="radio" name="answer" value="2"> <span id="option3">Option 3</span></label>
+                    <label><input type="radio" name="answer" value="3"> <span id="option4">Option 4</span></label>
+                    <label class="skip-option">
+                        <input type="radio" name="answer" value="skip"> 
+                        <span>🤷 I don't know / Skip</span>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Next Button -->
+            <button id="nextBtn" class="btn">
+                ➡ Listen to Audio First
+            </button>
+        </div>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="resultsScreen" class="screen">
+        <div class="results-content">
+            <h1>📊 ESTIMATED TEST RESULTS</h1>
+            
+            <div id="finalPlacement">
+                Placement: Calculating...
+            </div>
+            
+            <!-- Detailed Results Table -->
+            <div style="margin: 25px 0;">
+                <h3>Performance by Level</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>Score</th>
+                            <th>Avg Listens</th>
+                            <th>Avg Time</th>
+                            <th>Wrong</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsBody">
+                        <!-- Results populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="results-stats">
+                <div class="stat-box">
+                    <div id="correctAnswers" class="stat-number">0</div>
+                    <div class="stat-label">Correct</div>
+                </div>
+                <div class="stat-box">
+                    <div id="totalQuestionsDisplay" class="stat-number">0</div>
+                    <div class="stat-label">Answered</div>
+                </div>
+            </div>
+            
+            <div class="export-buttons">
+                <button id="exportJsonBtn" class="btn">💾 Export JSON</button>
+                <button id="exportCsvBtn" class="btn">📄 Export CSV</button>
+            </div>
+
+            <button id="restartBtn" class="btn">🔄 Restart Test</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
