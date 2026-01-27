@@ -1,21 +1,21 @@
 # ENGLISH LISTENING PLACEMENT TEST
 
-## Stage 1 toward a reliable, comprehensive English language placement test aligned to CEFR levels
+## Stage 2 toward a reliable, comprehensive English language placement test aligned to CEFR levels
 
-This project is a **simple web-based English listening placement test**.  
-It is designed as an **early prototype (Stage 1)** in the development of a reliable and comprehensive English language placement test aligned to the **CEFR (Common European Framework of Reference for Languages)**.
+This project is a **web-based English listening placement test** designed for research and educational purposes. 
 
-The application focuses specifically on **listening skills** and is intended for educational and research purposes.
+**Current Version: 2.0.0 (Development Phase)** This version marks the transition from a static prototype (Stage 1) to a dynamic, research-oriented assessment tool (Stage 2) capable of capturing complex performance metrics.
 
 ---
 
-## ✨ Features
+## ✨ Features (New in v2.0.0)
 
-- **Full CEFR Range:** Covers levels from A1 (Beginner) to C2 (Mastery)
-- **Progressive Difficulty:** Tests users across realistic scenarios, from supermarket announcements to architectural critiques
-- **Anti-Skip Logic:** Users must listen to each audio at least once before answering, supporting more valid results
-- **Session Persistence:** Uses local storage so users can resume an unfinished test if they close the browser
-- **Data Export:** Completed results can be exported in **JSON** or **CSV** format for further analysis
+- **Binary Adaptive Logic:** Replaces linear testing with a branching search model. The test begins at the **B2 (Upper Intermediate)** anchor point and adapts upwards or downwards based on performance, minimizing test fatigue.
+- **Automated Data Sync:** Integrated with **Google Apps Script**. All performance data (Placement, Latency, and Replays) is automatically synced to a secure Google Sheet for centralized analysis.
+- **Cognitive Load Metrics:** Captures **Response Latency** (time taken to answer) and **Replay Frequency** to allow for future analysis of learner effort and cognitive load.
+- **New Dashboard Layout:** Professional two-column interface with a dedicated research sidebar on the right.
+- **CEFR Range:** Full coverage from Beginner (Pre-A1/A1) to Mastery (C2).
+- **Informed Consent:** Integrated Data Protection Statement on the welcome screen ensuring ethical transparency for all participants regarding anonymous data collection.
 
 ---
 
@@ -23,90 +23,65 @@ The application focuses specifically on **listening skills** and is intended for
 
 You can try the application here:
 
-👉 **https://andywatkin01.github.io/English_placement_listening_test/**
-
-No installation is required — it runs directly in your web browser.
+👉 **[https://andywatkin01.github.io/English_placement_listening_test/](https://andywatkin01.github.io/English_placement_listening_test/)**
 
 ---
 
 ## 📌 Project Purpose
 
-- To explore the design of a **listening-based placement test**
-- To support future development of a **CEFR-aligned English assessment**
-- To provide a foundation for further stages, improvements, and validation
-
-This version is intentionally **simple** and will evolve over time.
+- To validate an **adaptive branching algorithm** for language placement.
+- To collect high-fidelity data on **listening processing effort** (latency and replays).
+- To provide a foundation for introducing formal measures of **cognitive load** in language assessment.
 
 ---
 
 ## 🛠️ Built With
 
-This project was built using basic web technologies:
-
-- **HTML** – structure and content  
-- **CSS** – layout and visual styling  
-- **JavaScript** – interactivity, scoring logic, and state management  
-
-No external libraries or frameworks are used.
+- **HTML5 & CSS3** – Flexbox-based dashboard layout featuring a right-aligned sidebar.
+- **JavaScript (Vanilla)** – Branching logic, session management, and asynchronous data transmission via POST.
+- **Google Apps Script** – Backend data handling and Google Sheets integration.
 
 ---
 
 ## 🚀 How to Use
 
-1. Open the live link in your browser  
-2. Follow the on-screen instructions  
-3. Listen to the audio and respond to the questions  
-4. Use the results as a **preliminary placement indicator**
+1. **Select Version:** Choose between Adult/Professional or Young Learners.
+2. **Review Documentation:** Use the right-hand sidebar to access the README, Project Overview, and Validation Report.
+3. **Take the Test:** Listen to the audio tracks. Questions appear after the first mandatory listen.
+4. **Data Sync:** Your anonymized results will automatically sync to the research database upon completion.
 
 ---
 
-## ⚠️ Disclaimer
+## ⚠️ Data Protection & Disclaimer
 
-This test is **not yet a validated or official CEFR placement test**.  
-It represents **Stage 1** of development and should be used for **experimental or exploratory purposes only**.
+This application collects **anonymous performance data only**. No personally identifiable information (names, emails, or IP addresses) is collected or stored. This test is currently in a **Development/Research Phase** and should be used as a preliminary indicator rather than a high-stakes certification tool.
 
 ---
 
 ## 🗂️ Project Structure
 
-- `index.html` – Core structure and user interface  
-- `app.js` – Audio playback, scoring logic, and state management  
-- `styles.css` – Custom styling for a clean, mobile-responsive test environment  
-- `/data/`
-  - `questions.json` – Listening test content  
-  - `scoring_rules.json` – Placement and scoring logic  
-
----
-
-## 🧪 Installation (for developers)
-
-To run the project locally:
-
-1. Clone the repository  
-2. Use a local server environment (for example, VS Code’s **Live Server** extension), as the app uses `fetch()` to load JSON data  
-3. Open `index.html` through the local server  
+- `index.html` – Responsive dashboard with right-aligned research sidebar.
+- `app.js` – Contains the binary adaptive logic and Google Sheets sync functions.
+- `/images/` – Contains `Logo.png` (centered in sidebar) and other UI assets.
+- `/data/` – `questions.json` containing the CEFR-aligned content.
 
 ---
 
 ## 📈 Future Development
 
-Planned improvements include:
-
-- Additional listening items for **school-aged learners** and **business English** contexts
-- Improved scoring logic
-- Clearer CEFR level mapping
-- User feedback and analytics
-- Accessibility enhancements
+- Implementation of formal cognitive load measurement scales.
+- Statistical analysis of response latency vs. CEFR accuracy.
+- Expansion of the item bank for specialized Young Learner contexts.
 
 ---
 
-## 📄 License
+## 🙌 Contact & Acknowledgements
 
-This project is shared for educational and research purposes.  
-(A specific license may be added later.)
+**Project Lead:** Anthony Watkin  
+**Email:** [anthony.watkin01@gmail.com](mailto:anthony.watkin01@gmail.com)
 
 ---
 
-## 🙌 Acknowledgements
-
-Thanks to everyone interested in language assessment and educational technology.
+### Recent Updates
+- **v2.0.0**: Migration to Adaptive Branching Logic and automated Google Cloud data syncing.
+- **v1.1.0**: Question sequence optimization for A2 and B1 levels.
