@@ -1,413 +1,307 @@
 {
   "test_id": "listening_placement_001",
   "test_name": "CEFR Listening Placement Test",
-  "levels": [
+  "versions": [
     {
-      "level_id": "A1",
-      "description": "Beginner",
-      "audios": [
+      "audience": "adult",
+      "description": "Standard CEFR placement for adults and professionals",
+      "levels": [
         {
-          "track_id": "A1_01",
-          "title": "Marco's Introduction",
-          "scenario": "A student introducing themselves to a receptionist",
-          "questions": [
+          "level_id": "A1",
+          "description": "Beginner",
+          "audios": [
             {
-              "q_id": "1",
-              "text": "Where is Marco from?",
-              "options": ["A) Spain", "B) Italy", "C) London", "D) France"],
-              "answer": "B"
+              "track_id": "A1_01",
+              "title": "Marco's Introduction",
+              "scenario": "A student introducing themselves to a receptionist",
+              "questions": [
+                { "q_id": "1", "text": "Where is Marco from?", "options": ["A) Spain", "B) Italy", "C) London", "D) France"], "answer": "B" },
+                { "q_id": "2", "text": "How old is Marco?", "options": ["A) 12", "B) 20", "C) 22", "D) 30"], "answer": "C" },
+                { "q_id": "3", "text": "Where does Marco live?", "options": ["A) In a big school", "B) In a small house", "C) In a shop", "D) In an office"], "answer": "B" },
+                { "q_id": "4", "text": "When does he want to study?", "options": ["A) Mondays and Wednesdays", "B) Tuesdays and Thursdays", "C) Every day", "D) On the weekend"], "answer": "A" }
+              ]
             },
             {
-              "q_id": "2",
-              "text": "How old is Marco?",
-              "options": ["A) 12", "B) 20", "C) 22", "D) 30"],
-              "answer": "C"
-            },
-            {
-              "q_id": "3",
-              "text": "Where does Marco live?",
-              "options": ["A) In a big school", "B) In a small house", "C) In a shop", "D) In an office"],
-              "answer": "B"
-            },
-            {
-              "q_id": "4",
-              "text": "When does he want to study?",
-              "options": ["A) Mondays and Wednesdays", "B) Tuesdays and Thursdays", "C) Every day", "D) On the weekend"],
-              "answer": "A"
+              "track_id": "A1_02",
+              "title": "The Supermarket",
+              "scenario": "A short announcement in a grocery store",
+              "questions": [
+                { "q_id": "1", "text": "How much are the apples?", "options": ["A) Two pounds", "B) Five pounds", "C) One pound", "D) Nine pounds"], "answer": "C" },
+                { "q_id": "2", "text": "What costs two pounds?", "options": ["A) The apples", "B) The milk", "C) The bread", "D) The water"], "answer": "C" },
+                { "q_id": "3", "text": "What time does the supermarket close?", "options": ["A) 9:00 AM", "B) 6:00 PM", "C) 7:00 PM", "D) 12:00 PM"], "answer": "B" },
+                { "q_id": "4", "text": "Where do you pay for the food?", "options": ["A) Back of shop", "B) Outside", "C) Front desk", "D) Cafe"], "answer": "C" }
+              ]
             }
           ]
         },
         {
-          "track_id": "A1_02",
-          "title": "The Supermarket",
-          "scenario": "A short announcement in a grocery store",
-          "questions": [
+          "level_id": "A2",
+          "description": "Elementary",
+          "audios": [
             {
-              "q_id": "1",
-              "text": "How much are the apples?",
-              "options": ["A) Two pounds", "B) Five pounds", "C) One pound", "D) Nine pounds"],
-              "answer": "C"
+              "track_id": "A2_01",
+              "title": "The Weekend Plan",
+              "scenario": "Two friends discussing Saturday plans",
+              "questions": [
+                { "q_id": "1", "text": "Why is James staying at home?", "options": ["A) Tennis", "B) Tired from work", "C) No money", "D) Waiting for sister"], "answer": "B" },
+                { "q_id": "2", "text": "What does Sarah want to do at the park?", "options": ["A) Movie", "B) Walk", "C) Play sport", "D) Meet James"], "answer": "C" },
+                { "q_id": "3", "text": "Who is Sarah going with?", "options": ["A) Her sister", "B) James", "C) Her brother", "D) Alone"], "answer": "A" },
+                { "q_id": "4", "text": "When will James go for a walk?", "options": ["A) Sat Morning", "B) Sat Evening", "C) Sunday", "D) Next week"], "answer": "C" }
+              ]
             },
             {
-              "q_id": "2",
-              "text": "What costs two pounds?",
-              "options": ["A) The apples", "B) The milk", "C) The bread", "D) The water"],
-              "answer": "C"
+              "track_id": "A2_02",
+              "title": "A New Job",
+              "scenario": "Elena leaving a voicemail about her new job",
+              "questions": [
+                { "q_id": "1", "text": "Where is Elena’s new job?", "options": ["A) School", "B) Hospital", "C) Bus station", "D) Factory"], "answer": "B" },
+                { "q_id": "2", "text": "What is Elena’s role?", "options": ["A) Nurse", "B) Driver", "C) Office worker", "D) Manager"], "answer": "C" },
+                { "q_id": "3", "text": "Why does she like her start time?", "options": ["A) Sleep late", "B) Can take bus", "C) Can drive car", "D) Finishes early"], "answer": "B" },
+                { "q_id": "4", "text": "What time did her old job start?", "options": ["A) 8:30", "B) 6:00", "C) 7:30", "D) 7:00"], "answer": "D" }
+              ]
+            }
+          ]
+        },
+        {
+          "level_id": "B1",
+          "description": "Intermediate",
+          "audios": [
+            {
+              "track_id": "B1_01",
+              "title": "The Travel Complaint",
+              "scenario": "A man calling a travel agency about a disappointing trip",
+              "questions": [
+                { "q_id": "1", "text": "Main reason for calling?", "options": ["A) Booking", "B) Cleanliness", "C) Location", "D) Train schedule"], "answer": "C" },
+                { "q_id": "2", "text": "Why spend more money?", "options": ["A) Price hike", "B) Taxis instead of trains", "C) Different hotel", "D) Missed flight"], "answer": "B" },
+                { "q_id": "3", "text": "What does he usually like about this agency?", "options": ["A) Cheap flights", "B) Service", "C) Central hotels", "D) Discounts"], "answer": "C" },
+                { "q_id": "4", "text": "What is he asking for?", "options": ["A) Full refund", "B) Better info", "C) Strike help", "D) Compensation"], "answer": "D" }
+              ]
             },
             {
-              "q_id": "3",
-              "text": "What time does the supermarket close?",
-              "options": ["A) 9:00 in the morning", "B) 6:00 in the evening", "C) 7:00 in the evening", "D) 12:00 in the afternoon"],
-              "answer": "B"
+              "track_id": "B1_02",
+              "title": "The Hobbyist",
+              "scenario": "Interview about urban gardening",
+              "questions": [
+                { "q_id": "1", "text": "Why start a garden?", "options": ["A) Balcony gift", "B) Save money", "C) Missed nature", "D) Office project"], "answer": "C" },
+                { "q_id": "2", "text": "Initial concern about vertical gardening?", "options": ["A) Cost", "B) Space", "C) Watering", "D) Finding wood"], "answer": "A" },
+                { "q_id": "3", "text": "Profession?", "options": ["A) Gardener", "B) Law firm worker", "C) Builder", "D) Host"], "answer": "B" },
+                { "q_id": "4", "text": "Main benefit?", "options": ["A) Sells food", "B) Less tired", "C) Relaxation", "D) Socializing"], "answer": "C" }
+              ]
+            }
+          ]
+        },
+        {
+          "level_id": "B2",
+          "description": "Upper Intermediate",
+          "audios": [
+            {
+              "track_id": "B2_01",
+              "title": "The Remote Work Debate",
+              "scenario": "Manager discussing new hybrid work policy",
+              "questions": [
+                { "q_id": "1", "text": "Productivity view?", "options": ["A) Lower", "B) Consistent", "C) Higher", "D) Unmeasurable"], "answer": "B" },
+                { "q_id": "2", "text": "Why end fully remote?", "options": ["A) Costs", "B) Ethic", "C) Teamwork", "D) Building use"], "answer": "C" },
+                { "q_id": "3", "text": "Manager concern?", "options": ["A) Overcrowding", "B) Siloes", "C) Office size", "D) Overworking"], "answer": "A" },
+                { "q_id": "4", "text": "Sarah's solution?", "options": ["A) Board decides", "B) M-W-F rule", "C) Teams organize", "D) Booking app"], "answer": "C" }
+              ]
             },
             {
-              "q_id": "4",
-              "text": "Where do you pay for the food?",
-              "options": ["A) At the back of the shop", "B) Outside the shop", "C) At the front desk", "D) At the cafe"],
-              "answer": "C"
+              "track_id": "B2_02",
+              "title": "The Urban Architect",
+              "scenario": "Architect discussing a city park project",
+              "questions": [
+                { "q_id": "1", "text": "Main goal?", "options": ["A) Office", "B) Connection", "C) Clean soil", "D) Highway"], "answer": "B" },
+                { "q_id": "2", "text": "Biggest obstacle?", "options": ["A) Budget", "B) Soil", "C) Opinions", "D) Road noise"], "answer": "D" },
+                { "q_id": "3", "text": "Noise solution?", "options": ["A) Wall", "B) Land levels", "C) Relocation", "D) Diversion"], "answer": "B" },
+                { "q_id": "4", "text": "Budget attitude?", "options": ["A) Regret", "B) Wants more", "C) Necessary high cost", "D) Completion worry"], "answer": "C" }
+              ]
+            }
+          ]
+        },
+        {
+          "level_id": "C1",
+          "description": "Advanced",
+          "audios": [
+            {
+              "track_id": "C1_01",
+              "title": "The Ethical Consumer",
+              "scenario": "Lecture on Greenwashing psychology",
+              "questions": [
+                { "q_id": "1", "text": "View on consumer info?", "options": ["A) Effective", "B) Leads to paralysis", "C) Reduced loyalty", "D) Required"], "answer": "B" },
+                { "q_id": "2", "text": "Greenwashing characteristic?", "options": ["A) Labels", "B) High prices", "C) Misleading cues", "D) Transparency"], "answer": "C" },
+                { "q_id": "3", "text": "Why mention chocolate?", "options": ["A) Complexity", "B) Recipe", "C) Cost", "D) Taste"], "answer": "A" },
+                { "q_id": "4", "text": "Final implication?", "options": ["A) Education", "B) Compliance", "C) Regulators needed", "D) Consumer power"], "answer": "C" }
+              ]
+            },
+            {
+              "track_id": "C1_02",
+              "title": "The Art Restoration Debate",
+              "scenario": "Critic discussing restoration",
+              "questions": [
+                { "q_id": "1", "text": "Why 'garish'?", "options": ["A) Wrong paint", "B) Modern perspective", "C) No talent", "D) Flawed analysis"], "answer": "B" },
+                { "q_id": "2", "text": "Main critique?", "options": ["A) Cost", "B) Intentional darkness", "C) Damage", "D) Technique"], "answer": "B" },
+                { "q_id": "3", "text": "Romantic decay?", "options": ["A) New style", "B) Preference for old", "C) Cleaning", "D) Mood"], "answer": "B" },
+                { "q_id": "4", "text": "Conclusion?", "options": ["A) Artist only", "B) Modern superiority", "C) Truth vs Taste", "D) Failure"], "answer": "C" }
+              ]
+            }
+          ]
+        },
+        {
+          "level_id": "C2",
+          "description": "Mastery",
+          "audios": [
+            {
+              "track_id": "C2_01",
+              "title": "The Biodiversity Paradox",
+              "scenario": "Radio essay on conservation",
+              "questions": [
+                { "q_id": "1", "text": "Primary critique?", "options": ["A) Underfunded", "B) Self-interest", "C) Choice", "D) Data"], "answer": "B" },
+                { "q_id": "2", "text": "'Utility bill' meaning?", "options": ["A) Cost", "B) Practical value only", "C) Boring", "D) Distribution"], "answer": "B" },
+                { "q_id": "3", "text": "Species ignored?", "options": ["A) Rainforest", "B) Resilient", "C) No market value", "D) Media"], "answer": "C" },
+                { "q_id": "4", "text": "Tone on utilitarian prism?", "options": ["A) Optimistic", "B) Objective", "C) Critical", "D) Indifferent"], "answer": "C" }
+              ]
+            },
+            {
+              "track_id": "C2_02",
+              "title": "The Urban Memory",
+              "scenario": "Architectural critique",
+              "questions": [
+                { "q_id": "1", "text": "View on renewal?", "options": ["A) Safety", "B) Erases identity", "C) Blends", "D) Failure"], "answer": "B" },
+                { "q_id": "2", "text": "Architectural taxidermy?", "options": ["A) Surface only", "B) Animal motifs", "C) Restoration", "D) High cost"], "answer": "A" },
+                { "q_id": "3", "text": "Heritage zones?", "options": ["A) Poor", "B) Better", "C) Excludes community", "D) Educates"], "answer": "C" },
+                { "q_id": "4", "text": "Palimpsest city?", "options": ["A) Scratch", "B) Hide", "C) Layers", "D) Artist-led"], "answer": "C" }
+              ]
             }
           ]
         }
       ]
     },
     {
-      "level_id": "A2",
-      "description": "Elementary",
-      "audios": [
+      "audience": "young_people",
+      "description": "CEFR placement for school-aged students, transitioning to standard academic content at advanced levels",
+      "levels": [
         {
-          "track_id": "A2_01",
-          "title": "The Weekend Plan",
-          "scenario": "Two friends discussing Saturday plans",
-          "questions": [
+          "level_id": "A1",
+          "description": "Beginner",
+          "audios": [
             {
-              "q_id": "1",
-              "text": "Why is James staying at home?",
-              "options": ["A) He wants to play tennis", "B) He is tired from work", "C) He has no money", "D) He is waiting for his sister"],
-              "answer": "B"
+              "track_id": "yA1_01",
+              "title": "Leo's Introduction",
+              "scenario": "A student introducing themselves",
+              "questions": [
+                { "q_id": "1", "text": "How old is Leo?", "options": ["A) Five", "B) Ten", "C) Twelve", "D) Eight"], "answer": "B" },
+                { "q_id": "2", "text": "Where is Leo from?", "options": ["A) Spain", "B) Italy", "C) France", "D) Mexico"], "answer": "A" },
+                { "q_id": "3", "text": "What is Leo's favorite color?", "options": ["A) Red", "B) Green", "C) Blue", "D) Yellow"], "answer": "C" },
+                { "q_id": "4", "text": "How many brothers does he have?", "options": ["A) One", "B) Three", "C) Two", "D) None"], "answer": "B" }
+              ]
             },
             {
-              "q_id": "2",
-              "text": "What does Sarah want to do at the park?",
-              "options": ["A) Watch a movie", "B) Go for a walk", "C) Play a sport", "D) Meet James"],
-              "answer": "C"
-            },
-            {
-              "q_id": "3",
-              "text": "Who is Sarah going to the park with?",
-              "options": ["A) Her sister", "B) James", "C) Her brother", "D) She is going alone"],
-              "answer": "A"
-            },
-            {
-              "q_id": "4",
-              "text": "When does James think he will go for a walk?",
-              "options": ["A) Saturday morning", "B) Saturday evening", "C) Sunday", "D) Next week"],
-              "answer": "C"
+              "track_id": "yA1_02",
+              "title": "The Canteen",
+              "scenario": "Information about school lunch options",
+              "questions": [
+                { "q_id": "1", "text": "How much is the fruit?", "options": ["A) Fifty pence", "B) One pound", "C) Twenty pence", "D) Five pence"], "answer": "A" },
+                { "q_id": "2", "text": "What time does the canteen open?", "options": ["A) 12:00", "B) 10:30", "C) 11:00", "D) 9:30"], "answer": "B" },
+                { "q_id": "3", "text": "What is the healthy option today?", "options": ["A) Pizza", "B) Burger", "C) A bottle of water", "D) Chips"], "answer": "C" },
+                { "q_id": "4", "text": "Where do you pay?", "options": ["A) Door", "B) Snack bar", "C) Classroom", "D) Outside"], "answer": "B" }
+              ]
             }
           ]
         },
         {
-          "track_id": "A2_02",
-          "title": "A New Job",
-          "scenario": "Elena leaving a voicemail about her new job",
-          "questions": [
+          "level_id": "A2",
+          "description": "Elementary",
+          "audios": [
             {
-              "q_id": "1",
-              "text": "Where is Elena’s new job?",
-              "options": ["A) In a school", "B) In a hospital", "C) In a bus station", "D) In a car factory"],
-              "answer": "B"
+              "track_id": "yA2_01",
+              "title": "The Weekend",
+              "scenario": "Friends discussing their upcoming weekend",
+              "questions": [
+                { "q_id": "1", "text": "Why can't Sarah go out?", "options": ["A) Sick", "B) Homework", "C) Traveling", "D) Sleeping"], "answer": "B" },
+                { "q_id": "2", "text": "What does James want to do?", "options": ["A) Video games", "B) Swimming", "C) Math", "D) Park"], "answer": "A" },
+                { "q_id": "3", "text": "Who is James meeting?", "options": ["A) Sister", "B) Brother", "C) Teacher", "D) Cousin"], "answer": "B" },
+                { "q_id": "4", "text": "When will they finish their project?", "options": ["A) Fri", "B) Sat", "C) Sun", "D) Mon"], "answer": "C" }
+              ]
             },
             {
-              "q_id": "2",
-              "text": "What is Elena’s role at her new job?",
-              "options": ["A) She is a nurse", "B) She is a driver", "C) She works in the office", "D) She is a manager"],
-              "answer": "C"
-            },
-            {
-              "q_id": "3",
-              "text": "Why does Elena like her new start time?",
-              "options": ["A) She can sleep until 9:00", "B) She can take the bus", "C) She can drive her car", "D) She finishes work early"],
-              "answer": "B"
-            },
-            {
-              "q_id": "4",
-              "text": "What time did her old job start?",
-              "options": ["A) 8:30", "B) 6:00", "C) 7:30", "D) 7:00"],
-              "answer": "D"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "level_id": "B1",
-      "description": "Intermediate",
-      "audios": [
-        {
-          "track_id": "B1_01",
-          "title": "The Travel Complaint",
-          "scenario": "A man calling a travel agency about a disappointing trip",
-          "questions": [
-            {
-              "q_id": "1",
-              "text": "What is the speaker’s main reason for calling?",
-              "options": ["A) To book a holiday", "B) To complain about cleanliness", "C) Dissatisfaction with location", "D) To ask about train schedules"],
-              "answer": "C"
-            },
-            {
-              "q_id": "2",
-              "text": "Why did the speaker spend more money than expected?",
-              "options": ["A) Price increases", "B) Used taxis instead of trains", "C) Stayed elsewhere", "D) Missed his flight"],
-              "answer": "B"
-            },
-            {
-              "q_id": "3",
-              "text": "What does the speaker usually like about this agency?",
-              "options": ["A) Cheap flights", "B) Service", "C) Central location of hotels", "D) Summer discounts"],
-              "answer": "C"
-            },
-            {
-              "q_id": "4",
-              "text": "What is the speaker asking for?",
-              "options": ["A) Full refund", "B) Better info", "C) Strike help", "D) Financial compensation"],
-              "answer": "D"
+              "track_id": "yA2_02",
+              "title": "The Hobby",
+              "scenario": "Talking about learning a musical instrument",
+              "questions": [
+                { "q_id": "1", "text": "What instrument is Elena learning?", "options": ["A) Piano", "B) Violin", "C) Guitar", "D) Drums"], "answer": "B" },
+                { "q_id": "2", "text": "What time is her lesson?", "options": ["A) 3:30", "B) 4:00", "C) 5:30", "D) 2:00"], "answer": "A" },
+                { "q_id": "3", "text": "What does she do after class?", "options": ["A) Home", "B) Dinner", "C) Walks", "D) Sleep"], "answer": "C" },
+                { "q_id": "4", "text": "Why did her dad have to pick her up?", "options": ["A) Race", "B) Finished late", "C) Early", "D) Bored"], "answer": "B" }
+              ]
             }
           ]
         },
         {
-          "track_id": "B1_02",
-          "title": "The Hobbyist",
-          "scenario": "Interview about urban gardening",
-          "questions": [
+          "level_id": "B1",
+          "description": "Intermediate",
+          "audios": [
             {
-              "q_id": "1",
-              "text": "Why did Chloe start a garden?",
-              "options": ["A) Gifted a balcony", "B) To save money", "C) Missed nature", "D) Office project"],
-              "answer": "C"
+              "track_id": "yB1_01",
+              "title": "The Museum Trip",
+              "scenario": "Student feedback on a field trip",
+              "questions": [
+                { "q_id": "1", "text": "What is the main complaint?", "options": ["A) Food", "B) Price", "C) Bus distance", "D) Guide"], "answer": "C" },
+                { "q_id": "2", "text": "What was wrong with the interactive display?", "options": ["A) Missing", "B) Broken", "C) Crowded", "D) Small"], "answer": "B" },
+                { "q_id": "3", "text": "Why didn't they ?", "options": ["A) No time", "B) Price", "C) Rain", "D) Closed"], "answer": "C" },
+                { "q_id": "4", "text": "What does the student want?", "options": ["A) Lunch", "B) Zoo discount", "C) No homework", "D) Marks"], "answer": "B" }
+              ]
             },
             {
-              "q_id": "2",
-              "text": "What was Chloe’s initial concern about vertical gardening?",
-              "options": ["A) Cost of materials", "B) Lack of space", "C) Watering time", "D) Finding wood"],
-              "answer": "A"
-            },
-            {
-              "q_id": "3",
-              "text": "What does Chloe do for a living?",
-              "options": ["A) Professional gardener", "B) Works at a law firm", "C) Furniture builder", "D) Podcast host"],
-              "answer": "B"
-            },
-            {
-              "q_id": "4",
-              "text": "What is the main benefit Chloe gets from gardening?",
-              "options": ["A) Sells food", "B) Less tired at work", "C) Way to relax", "D) Time with friends"],
-              "answer": "C"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "level_id": "B2",
-      "description": "Upper Intermediate",
-      "audios": [
-        {
-          "track_id": "B2_01",
-          "title": "The Remote Work Debate",
-          "scenario": "Manager discussing new hybrid work policy",
-          "questions": [
-            {
-              "q_id": "1",
-              "text": "What is the manager's perspective on remote work productivity?",
-              "options": ["A) Lower", "B) Consistent level", "C) Higher", "D) Unmeasurable"],
-              "answer": "B"
-            },
-            {
-              "q_id": "2",
-              "text": "Why is the company moving away from fully remote work?",
-              "options": ["A) Software costs", "B) Work ethic", "C) Encourage unplanned teamwork", "D) Empty building"],
-              "answer": "C"
-            },
-            {
-              "q_id": "3",
-              "text": "What is the manage's concern regarding the new three-two split?",
-              "options": ["A) Everyone choosing the same days", "B) Team siloes", "C) Office size", "D) Overworking"],
-              "answer": "A"
-            },
-            {
-              "q_id": "4",
-              "text": "What does Sarah suggest as a solution for office attendance?",
-              "options": ["A) Board decides", "B) Mon-Wed-Fri rule", "C) Teams organize own schedules", "D) Desk booking app"],
-              "answer": "C"
+              "track_id": "yB1_02",
+              "title": "The School Garden",
+              "scenario": "A project to improve school grounds",
+              "questions": [
+                { "q_id": "1", "text": "What was the problem with old area?", "options": ["A) Small", "B) Concrete", "C) Sun", "D) Water"], "answer": "B" },
+                { "q_id": "2", "text": "What planter material was used?", "options": ["A) Plastic", "B) Clay", "C) Crates", "D) Tires"], "answer": "C" },
+                { "q_id": "3", "text": "What are they growing?", "options": ["A) Roses", "B) Potatoes", "C) Mint", "D) Sunflowers"], "answer": "C" },
+                { "q_id": "4", "text": "Why does the speaker like it?", "options": ["A) Sell", "B) Relax", "C) Skip", "D) Football"], "answer": "B" }
+              ]
             }
           ]
         },
         {
-          "track_id": "B2_02",
-          "title": "The Urban Architect",
-          "scenario": "Architect discussing a city park project",
-          "questions": [
+          "level_id": "B2",
+          "description": "Upper Intermediate",
+          "audios": [
             {
-              "q_id": "1",
-              "text": "What was the main goal of the park project?",
-              "options": ["A) Office space", "B) Connect city areas", "C) Clean soil", "D) New highway"],
-              "answer": "B"
+              "track_id": "yB2_01",
+              "title": "The School Policy",
+              "scenario": "Debate on mobile phones",
+              "questions": [
+                { "q_id": "1", "text": "What is the main benefit of rule?", "options": ["A) Grades", "B) Noise", "C) Social", "D) Focus"], "answer": "C" },
+                { "q_id": "2", "text": "Where are mobile phones allowed?", "options": ["A) Canteen", "B) Library", "C) Everywhere", "D) None"], "answer": "B" },
+                { "q_id": "3", "text": "What is the student opinion?", "options": ["A) Strict", "B) Confusing", "C) Flexible", "D) Unfair"], "answer": "C" },
+                { "q_id": "4", "text": "How do teachers want students to spend their time together?", "options": ["A) Face-to-face", "B) Digital", "C) Quiet", "D) Testing"], "answer": "A" }
+              ]
             },
             {
-              "q_id": "2",
-              "text": "What was the biggest obstacle David faced?",
-              "options": ["A) Budget", "B) Dirty soil", "C) Local opinions", "D) Loud sounds from the road"],
-              "answer": "D"
-            },
-            {
-              "q_id": "3",
-              "text": "How did the team address the noise problem?",
-              "options": ["A) Concrete wall", "B) Levels of land to block sound", "C) Relocation", "D) Traffic diversion"],
-              "answer": "B"
-            },
-            {
-              "q_id": "4",
-              "text": "What is David’s attitude toward the project’s budget?",
-              "options": ["A) Regret", "B) Wants more funds", "C) High cost was necessary", "D) Completion worry"],
-              "answer": "C"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "level_id": "C1",
-      "description": "Advanced",
-      "audios": [
-        {
-          "track_id": "C1_01",
-          "title": "The Ethical Consumer",
-          "scenario": "Lecture on Greenwashing psychology",
-          "questions": [
-            {
-              "q_id": "1",
-              "text": "What is the professor’s view on providing more information to consumers?",
-              "options": ["A) Most effective", "B) Results in inability to decide", "C) Reduced loyalty", "D) Legally required"],
-              "answer": "B"
-            },
-            {
-              "q_id": "2",
-              "text": "What is a key characteristic of 'greenwashing'?",
-              "options": ["A) 3rd party labels", "B) High prices", "C) Misleading visual/verbal cues", "D) Data transparency"],
-              "answer": "C"
-            },
-            {
-              "q_id": "3",
-              "text": "Why does the speaker mention the 'chocolate bar'?",
-              "options": ["A) Complexity of modern production", "B) New recipes", "C) Ethical cost", "D) Consumer taste"],
-              "answer": "A"
-            },
-            {
-              "q_id": "4",
-              "text": "What is the speaker’s final rhetorical question implying?",
-              "options": ["A) Education needed", "B) Corps following rules", "C) Regulators should take responsibility", "D) Consumer power"],
-              "answer": "C"
+              "track_id": "yB2_02",
+              "title": "The Playground Redesign",
+              "scenario": "Transforming wasteland",
+              "questions": [
+                { "q_id": "1", "text": "What was the site before?", "options": ["A) Forest", "B) Wasteland", "C) Parking", "D) Farm"], "answer": "B" },
+                { "q_id": "2", "text": "What was the main challenge?", "options": ["A) Space", "B) Wind", "C) Noise", "D) Soil"], "answer": "C" },
+                { "q_id": "3", "text": "What was used as a sound block?", "options": ["A) Glass", "B) Stone", "C) Hedges", "D) Trees"], "answer": "C" },
+                { "q_id": "4", "text": "What is the intended mood?", "options": ["A) Tranquility", "B) Energy", "C) Competition", "D) Modern"], "answer": "A" }
+              ]
             }
           ]
         },
         {
-          "track_id": "C1_02",
-          "title": "The Art Restoration Debate",
-          "scenario": "Critic discussing restoration of a Renaissance fresco",
-          "questions": [
-            {
-              "q_id": "1",
-              "text": "Why does the speaker describe the restored colors as 'garish'?",
-              "options": ["A) Wrong paint", "B) How colors appear to people today", "C) Lack of talent", "D) Flawed analysis"],
-              "answer": "B"
-            },
-            {
-              "q_id": "2",
-              "text": "What is the main argument used by critics of the restoration?",
-              "options": ["A) Cost", "B) Artist intended it to look dark", "C) Analysis damage", "D) Soot was technique"],
-              "answer": "B"
-            },
-            {
-              "q_id": "3",
-              "text": "What does the speaker mean by 'romantic decay'?",
-              "options": ["A) New style", "B) Preference for art looking old", "C) Cleaning process", "D) Renaissance mood"],
-              "answer": "B"
-            },
-            {
-              "q_id": "4",
-              "text": "What is the speaker’s underlying conclusion?",
-              "options": ["A) Original artist only", "B) Modern superiority", "C) Conflict: truth vs modern taste", "D) Failure"],
-              "answer": "C"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "level_id": "C2",
-      "description": "Mastery",
-      "audios": [
-        {
-          "track_id": "C2_01",
-          "title": "The Biodiversity Paradox",
-          "scenario": "Radio essay on human-centric conservation",
-          "questions": [
-            {
-              "q_id": "1",
-              "text": "What is the speaker’s primary critique of modern conservation efforts?",
-              "options": ["A) Underfunded", "B) Human self-interest", "C) Species choice", "D) Outdated data"],
-              "answer": "B"
-            },
-            {
-              "q_id": "2",
-              "text": "What does the speaker imply by the use of the phrase 'utility bill'?",
-              "options": ["A) Higher costs", "B) Practical value only", "C) Boring topic", "D) Unfair distribution"],
-              "answer": "B"
-            },
-            {
-              "q_id": "3",
-              "text": "According to the speaker, which species are currently being ignored?",
-              "options": ["A) Rainforest species", "B) Resilient species", "C) Those with no market value", "D) Those with media attention"],
-              "answer": "C"
-            },
-            {
-              "q_id": "4",
-              "text": "What is the speaker’s tone when discussing the 'utilitarian prism'?",
-              "options": ["A) Optimistic", "B) Objective", "C) Highly critical", "D) Indifferent"],
-              "answer": "C"
-            }
-          ]
-        },
-        {
-          "track_id": "C2_02",
-          "title": "The Urban Memory",
-          "scenario": "Architectural critique of modern cities",
-          "questions": [
-            {
-              "q_id": "1",
-              "text": "What is the speaker’s view on rapid urban renewal?",
-              "options": ["A) Safety requirement", "B) Erases identity", "C) Blends styles", "D) Financial failure"],
-              "answer": "B"
-            },
-            {
-              "q_id": "2",
-              "text": "What is meant by 'architectural taxidermy'?",
-              "options": ["A) Surface preservation only", "B) Animal motifs", "C) Restoration", "D) High cost"],
-              "answer": "A"
-            },
-            {
-              "q_id": "3",
-              "text": "What is the speaker’s view on 'heritage zones'?",
-              "options": ["A) Protects poor", "B) Aesthetically better", "C) Excludes original community", "D) Educates affluent"],
-              "answer": "C"
-            },
-            {
-              "q_id": "4",
-              "text": "What does a 'palimpsest' city suggest?",
-              "options": ["A) Rebuild from scratch", "B) Hide mistakes", "C) Visible historical layers", "D) Artist-led design"],
-              "answer": "C"
-            }
-          ]
-        }
+  "level_id": "C1",
+  "description": "Advanced",
+  "audios": [] 
+},
+{
+  "level_id": "C2",
+  "description": "Mastery",
+  "audios": []
+}
       ]
     }
   ]
