@@ -81,34 +81,24 @@ function startAssessment() {
     loadQuestion();
 }
 
-// ==================== ADAPTIVE LOGIC (The Core Change) ====================
+// ==================== ADAPTIVE LOGIC (AMENDED WITH BUG FIXES) ====================
 function evaluateLevelResult() {
     const levelId = testData.levels[currentLevelIndex].level_id;
-    const passed = scores[levelId].correct >= 6;
+    const passed = scores[levelId].correct >= 6; // 75% pass mark
+
+    console.log(`Level ${levelId} complete. Passed: ${passed}. Score: ${scores[levelId].correct}`);
 
     if (levelId === "B2") {
-        if (passed) {
-            goToLevel("C1");
-        } else {
-            goToLevel("A2");
-        }
+        passed ? goToLevel("C1") : goToLevel("A2");
     } 
     else if (levelId === "C1") {
-        if (passed) {
-            goToLevel("C2");
-        } else {
-            finishTest("B2");
-        }
+        passed ? goToLevel("C2") : finishTest("B2");
     } 
     else if (levelId === "C2") {
         finishTest(passed ? "C2" : "C1");
     } 
     else if (levelId === "A2") {
-        if (passed) {
-            goToLevel("B1");
-        } else {
-            goToLevel("A1");
-        }
+        passed ? goToLevel("B1") : goToLevel("A1");
     } 
     else if (levelId === "B1") {
         finishTest(passed ? "B1" : "A2");
@@ -119,10 +109,27 @@ function evaluateLevelResult() {
 }
 
 function goToLevel(levelKey) {
+    // 1. Logic Fix: Validate level exists in map to prevent "undefined" hangs
+    if (levelMap[levelKey] === undefined) {
+        console.error(`Logic Error: ${levelKey} is not defined in levelMap.`);
+        finishTest("Error");
+        return;
+    }
+
+    // 2. Update global index
     currentLevelIndex = levelMap[levelKey];
+    
+    // 3. Reset track/question counters for the new level
     currentAudioIndex = 0;
     currentQuestionIndex = 0;
-    document.getElementById('current-task').innerHTML = `Status: <span class="status-badge">Testing ${levelKey}</span>`;
+
+    // 4. Update UI status in sidebar
+    const statusElem = document.getElementById('current-task');
+    if (statusElem) {
+        statusElem.innerHTML = `Status: <span class="status-badge">Testing ${levelKey}</span>`;
+    }
+
+    console.log(`Transitioning to ${levelKey} (Index: ${currentLevelIndex})`);
     loadQuestion();
 }
 
