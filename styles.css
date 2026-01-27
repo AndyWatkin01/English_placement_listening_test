@@ -1,345 +1,139 @@
-/* ========== FULL SCREEN LAYOUT - NO SCROLL ========== */
+/* ==================== GLOBAL STYLES ==================== */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f0f2f5;
-    color: #333;
-    height: 100vh;
+body, html {
+    height: 100%;
+    background-color: #f4f7f6;
+    color: #2c3e50;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
 }
 
 .screen {
-    display: none;
+    display: none; 
     height: 100vh;
-    width: 100%;
-    background: white;
-    overflow: hidden;
+    width: 100vw;
 }
 
-/* ========== WELCOME SCREEN - CENTERED ========== */
-#welcomeScreen {
+/* ==================== SPLIT-SCREEN LAYOUT ==================== */
+.welcome-layout {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.welcome-main {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center; 
+    background: white;
+    text-align: center;      
 }
 
 .welcome-content {
     width: 100%;
-    max-width: 600px;
-    text-align: center;
-    margin: 0 auto;
+    max-width: 650px;
 }
 
-/* ========== TEST SCREEN - COMPACT LAYOUT ========== */
-#testScreen {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.test-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-    border-bottom: 2px solid #eaeaea;
-    margin-bottom: 15px;
-}
-
-.test-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    overflow: hidden;
-}
-
-/* ========== COMPACT GRID LAYOUT ========== */
-.compact-layout {
-    display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    gap: 15px;
-    height: calc(100vh - 140px); /* Accounts for header and padding */
-    overflow: hidden;
-}
-
-/* ========== RESULTS SCREEN ========== */
-#resultsScreen {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    overflow-y: auto;
-}
-
-/* ========== BUTTONS ========== */
-.btn {
-    padding: 14px 28px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 16px;
-    transition: all 0.2s;
-    text-align: center;
-}
-
-.btn:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    transform: none !important;
-    box-shadow: none !important;
-}
-
-.btn-small {
-    padding: 10px 20px;
-    background: #3498db;
+/* ==================== SIDEBAR & BUTTON LINKS ==================== */
+.welcome-sidebar {
+    width: 320px;
+    background-color: #2c3e50;
     color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 15px;
-    min-width: 120px;
-}
-
-/* ========== PROGRESS BAR ========== */
-.progress-bar {
-    width: 100%;
-    height: 10px;
-    background: #eee;
-    border-radius: 5px;
-    overflow: hidden;
-    margin: 5px 0;
-}
-
-#testProgressFill {
-    height: 100%;
-    background: linear-gradient(90deg, #2ecc71, #3498db);
-    width: 0%;
-    transition: width 0.5s ease;
-}
-
-/* ========== COMPACT AUDIO PLAYER ========== */
-.audio-player-container {
-    background: #f8fafc;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
-}
-
-.audio-controls {
+    padding: 40px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+    text-align: left;
 }
 
-.audio-progress-container {
-    margin-top: 10px;
+.sidebar-top h3 {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 10px;
 }
 
-.audio-progress-bar {
-    width: 100%;
-    height: 8px;
-    background: #e2e8f0;
-    border-radius: 4px;
-    overflow: hidden;
-    margin: 5px 0;
-}
-
-.audio-progress-fill {
-    width: 0%;
-    height: 100%;
-    background: linear-gradient(90deg, #3498db, #2980b9);
-    border-radius: 4px;
-    transition: width 0.1s linear;
-}
-
-.audio-time-display {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    color: #64748b;
-}
-
-.audio-info {
-    font-size: 13px;
-    color: #4a5568;
-    text-align: center;
-    margin-top: 5px;
-    line-height: 1.4;
-}
-
-/* ========== QUESTION COUNTER ========== */
-.question-counter {
-    text-align: center;
-    color: #5a6c7d;
-    font-size: 14px;
+/* Formatting the links as White Buttons */
+.sidebar-top nav a {
+    display: block;
+    color: white;             /* White text */
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    padding: 12px 15px;       /* Padding makes it look like a button */
+    border: 1px solid white;  /* White border */
+    border-radius: 6px;       /* Rounded corners */
+    transition: all 0.3s ease;
+    text-align: center;       /* Centers the text inside the button */
     font-weight: 500;
-    margin: 5px 0;
 }
 
-/* ========== QUESTION AREA ========== */
-#questionText {
-    font-size: 20px;
-    line-height: 1.4;
-    color: #2c3e50;
-    min-height: 60px;
+.sidebar-top nav a:hover {
+    background-color: white;  /* Flips colors on hover */
+    color: #2c3e50;           /* Dark text on white background */
+}
+
+.sidebar-footer {
+    font-size: 0.8rem;
+    color: #bdc3c7;
+}
+
+/* ==================== MAIN CONTENT BUTTONS & LOGO ==================== */
+.logo-container {
+    margin-bottom: 30px;
+}
+
+.main-logo {
+    width: 240px;
+    height: auto;
+}
+
+.selection-buttons {
     display: flex;
-    align-items: center;
-    padding: 10px 0;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
 }
 
-.options {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 8px;
-    flex: 1;
-    overflow-y: auto;
-    padding-right: 5px;
-    margin: 5px 0;
-}
-
-.options label {
-    display: flex;
-    align-items: center;
-    padding: 12px 15px;
-    background: #f8fafc;
-    border: 2px solid #e2e8f0;
+.btn {
+    padding: 15px 25px;
+    border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.2s;
-    min-height: 50px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.options label:hover:not(:has(input[type="radio"]:disabled)) {
-    background: #f1f5f9;
-    border-color: #cbd5e1;
-    transform: translateX(3px);
+.version-btn {
+    background-color: #ecf0f1;
+    border: 2px solid #bdc3c7;
+    color: #2c3e50;
 }
 
-.options input[type="radio"] {
-    margin-right: 12px;
-    transform: scale(1.2);
+.version-btn.active {
+    background-color: #3498db;
+    color: white;
+    border-color: #2980b9;
 }
 
-.options input[type="radio"]:disabled + span {
-    color: #94a3b8;
-    cursor: not-allowed;
+.start-btn {
+    background-color: #1abc9c;
+    color: white;
+    padding: 18px 40px;
+    margin-top: 20px;
 }
 
-.options label:has(input[type="radio"]:disabled) {
-    background: #f1f5f9;
-    border-color: #e2e8f0;
-    cursor: not-allowed;
-}
-
-.options label:has(input[type="radio"]:disabled):hover {
-    background: #f1f5f9;
-    border-color: #e2e8f0;
-    transform: none;
-}
-
-.skip-option {
-    margin-top: 8px;
-    border-top: 2px solid #e2e8f0;
-    padding-top: 12px;
-    color: #64748b;
-}
-
-/* ========== WARNINGS ========== */
-.warning {
-    background: #fff3cd;
-    color: #856404;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ffeaa7;
-    display: none;
-    font-size: 14px;
-    text-align: center;
-}
-
-/* ========== SCROLLBAR ========== */
-::-webkit-scrollbar {
-    width: 6px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #c1c1c1;
-    border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #a8a8a8;
-}
-
-/* ========== RESPONSIVE ========== */
-@media (max-width: 768px) {
-    .screen {
-        padding: 15px;
-    }
-    
-    #questionText {
-        font-size: 18px;
-    }
-    
-    .options label {
-        padding: 10px 12px;
-        min-height: 45px;
-    }
-    
-    .btn {
-        padding: 12px 20px;
-        font-size: 15px;
-    }
-    
-    .test-header {
-        flex-direction: column;
-        gap: 8px;
-        text-align: center;
-    }
-    
-    .compact-layout {
-        height: calc(100vh - 120px);
-    }
-}
-
-@media (max-height: 700px) {
-    .options label {
-        padding: 8px 10px;
-        min-height: 40px;
-    }
-    
-    #questionText {
-        font-size: 18px;
-        min-height: 50px;
-        padding: 5px 0;
-    }
-    
-    .audio-player-container {
-        padding: 12px;
-    }
-    
-    .compact-layout {
-        gap: 10px;
-    }
+/* ==================== TEST INTERFACE ==================== */
+.test-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
 }
