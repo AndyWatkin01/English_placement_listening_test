@@ -293,15 +293,61 @@
           ]
         },
         {
-  "level_id": "C1",
-  "description": "Advanced",
-  "audios": [] 
-},
-{
-  "level_id": "C2",
-  "description": "Mastery",
-  "audios": []
-}
+          "level_id": "C1",
+          "description": "Advanced",
+          "audios": [
+            {
+              "track_id": "C1_01",
+              "title": "The Ethical Consumer",
+              "scenario": "Lecture on Greenwashing psychology",
+              "questions": [
+                { "q_id": "1", "text": "View on consumer info?", "options": ["A) Effective", "B) Leads to paralysis", "C) Reduced loyalty", "D) Required"], "answer": "B" },
+                { "q_id": "2", "text": "Greenwashing characteristic?", "options": ["A) Labels", "B) High prices", "C) Misleading cues", "D) Transparency"], "answer": "C" },
+                { "q_id": "3", "text": "Why mention chocolate?", "options": ["A) Complexity", "B) Recipe", "C) Cost", "D) Taste"], "answer": "A" },
+                { "q_id": "4", "text": "Final implication?", "options": ["A) Education", "B) Compliance", "C) Regulators needed", "D) Consumer power"], "answer": "C" }
+              ]
+            },
+            {
+              "track_id": "C1_02",
+              "title": "The Art Restoration Debate",
+              "scenario": "Critic discussing restoration",
+              "questions": [
+                { "q_id": "1", "text": "Why 'garish'?", "options": ["A) Wrong paint", "B) Modern perspective", "C) No talent", "D) Flawed analysis"], "answer": "B" },
+                { "q_id": "2", "text": "Main critique?", "options": ["A) Cost", "B) Intentional darkness", "C) Damage", "D) Technique"], "answer": "B" },
+                { "q_id": "3", "text": "Romantic decay?", "options": ["A) New style", "B) Preference for old", "C) Cleaning", "D) Mood"], "answer": "B" },
+                { "q_id": "4", "text": "Conclusion?", "options": ["A) Artist only", "B) Modern superiority", "C) Truth vs Taste", "D) Failure"], "answer": "C" }
+              ]
+            }
+          ]
+        },
+        {
+          "level_id": "C2",
+          "description": "Mastery",
+          "audios": [
+            {
+              "track_id": "C2_01",
+              "title": "The Biodiversity Paradox",
+              "scenario": "Radio essay on conservation",
+              "questions": [
+                { "q_id": "1", "text": "Primary critique?", "options": ["A) Underfunded", "B) Self-interest", "C) Choice", "D) Data"], "answer": "B" },
+                { "q_id": "2", "text": "'Utility bill' meaning?", "options": ["A) Cost", "B) Practical value only", "C) Boring", "D) Distribution"], "answer": "B" },
+                { "q_id": "3", "text": "Species ignored?", "options": ["A) Rainforest", "B) Resilient", "C) No market value", "D) Media"], "answer": "C" },
+                { "q_id": "4", "text": "Tone on utilitarian prism?", "options": ["A) Optimistic", "B) Objective", "C) Critical", "D) Indifferent"], "answer": "C" }
+              ]
+            },
+            {
+              "track_id": "C2_02",
+              "title": "The Urban Memory",
+              "scenario": "Architectural critique",
+              "questions": [
+                { "q_id": "1", "text": "View on renewal?", "options": ["A) Safety", "B) Erases identity", "C) Blends", "D) Failure"], "answer": "B" },
+                { "q_id": "2", "text": "Architectural taxidermy?", "options": ["A) Surface only", "B) Animal motifs", "C) Restoration", "D) High cost"], "answer": "A" },
+                { "q_id": "3", "text": "Heritage zones?", "options": ["A) Poor", "B) Better", "C) Excludes community", "D) Educates"], "answer": "C" },
+                { "q_id": "4", "text": "Palimpsest city?", "options": ["A) Scratch", "B) Hide", "C) Layers", "D) Artist-led"], "answer": "C" }
+              ]
+            }
+          ]
+        }
       ]
     }
   ]
